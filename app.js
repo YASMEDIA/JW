@@ -343,7 +343,7 @@ if (document.querySelector('.game-detail-hero')) {
       orderBtn.target = '_blank';
       orderBtn.rel = 'noopener';
       if (game.isApp) {
-        orderBtn.querySelector('span').innerHTML = '⬇️ Download Now';
+        orderBtn.querySelector('span').innerHTML = 'Download Now';
       }
     }
 
