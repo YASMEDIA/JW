@@ -5,15 +5,20 @@ const GAMES = {
   'trivia-wars': {
     id: 'trivia-wars',
     emoji: '🧠',
-    name: 'Trivia Wars',
+    logoImg: 'assest/99.svg',
+    logoBg: '#000000',
+    logoBorderColor: 'rgba(255,0,10,0.4)',
+    name: '9ayad x Na9ab',
     tagline: 'The battle of minds begins now',
-    desc: 'Trivia Wars is the ultimate knowledge showdown. Challenge your friends across 20+ categories — pop culture, science, sports, history, and more. With lightning rounds, power-ups, and sudden death finales, every match is a new battle. Designed for groups of 2–20 players, Trivia Wars turns any gathering into an epic championship.',
+    desc: `9ayad X Na9ab is a fast-paced social game of deception, persuasion, and sharp thinking.<br>Can you convince your friends when you don't even know the answer — or will they expose you?<br><br>Every round is a mind game where confidence beats knowledge.<br>Built for high-energy groups, it turns any gathering into a tense, hilarious battle of wits.`,
     players: '2–20 Players',
     duration: '30–60 min',
     age: '12+',
-    type: 'Quiz / Party',
-    color: '#1a4aff',
-    orderUrl: 'https://yasmedia.com/order',
+    type: 'App / Party',
+    color: '#ff000a',
+    orderUrl: 'https://na9aab.com',
+    isApp: true,
+    videoId: 'jkXSxmFGfIg',
   },
   'draw-blast': {
     id: 'draw-blast',
@@ -320,20 +325,40 @@ if (document.querySelector('.game-detail-hero')) {
     const downloadBtn = $('#download-btn');
     const videoLabel = $('#video-label');
 
-    if (logoEl) logoEl.textContent = game.emoji;
+    if (logoEl) {
+      if (game.logoImg) {
+        logoEl.innerHTML = `<img src="${game.logoImg}" alt="${game.name}">`;
+        logoEl.style.background = game.logoBg || 'rgba(255,255,255,0.08)';
+        logoEl.style.borderColor = game.logoBorderColor || 'rgba(255,255,255,0.15)';
+        logoEl.style.padding = '16px';
+      } else {
+        logoEl.textContent = game.emoji;
+      }
+    }
     if (titleEl) titleEl.textContent = game.name;
     if (taglineEl) taglineEl.textContent = game.tagline;
-    if (descEl) descEl.textContent = game.desc;
+    if (descEl) descEl.innerHTML = game.desc;
     if (orderBtn) {
       orderBtn.href = game.orderUrl;
       orderBtn.target = '_blank';
       orderBtn.rel = 'noopener';
+      if (game.isApp) {
+        orderBtn.querySelector('span').innerHTML = '⬇️ Download Now';
+      }
     }
-    if (downloadBtn) {
-      downloadBtn.href = `manuals/${gameId}-manual.pdf`;
-      downloadBtn.download = `${game.name} Manual.pdf`;
+
+    // Hide manual card if no manual provided
+    const manualCard = $('#download-btn')?.closest('.glass-card');
+    if (manualCard && !game.manualUrl) manualCard.style.display = 'none';
+
+    // Embed YouTube video if videoId provided
+    const videoSection = $('#video-section');
+    if (videoSection && game.videoId) {
+      videoSection.innerHTML = `<iframe src="https://www.youtube.com/embed/${game.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--radius-lg);"></iframe>`;
+      videoSection.style.position = 'relative';
+    } else if (videoLabel) {
+      videoLabel.textContent = `${game.name} — Gameplay Reel`;
     }
-    if (videoLabel) videoLabel.textContent = `${game.name} — Gameplay Reel`;
 
     // Apply game color accent
     document.documentElement.style.setProperty('--blue-glow', game.color);
