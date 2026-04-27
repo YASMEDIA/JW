@@ -23,67 +23,78 @@ const GAMES = {
   'draw-blast': {
     id: 'draw-blast',
     emoji: '🎨',
-    name: 'Draw Blast',
+    logoImg: 'assest/Deera.svg',
+    logoBg: '#ed5633',
+    logoBorderColor: 'rgba(237,86,51,0.4)',
+    name: 'Al-Deera',
     tagline: 'Sketch fast. Guess faster.',
-    desc: 'Draw Blast is pure chaotic creativity. One player draws, the rest guess — but with wild modifiers like "draw with your eyes closed", "30 second limit", or "your teammate guides your hand". A perfect mix of artistic disaster and uncontrollable laughter, perfect for all ages and group sizes.',
+    desc: 'Al-Deera is pure chaotic creativity. One player draws, the rest guess — but with wild modifiers like "draw with your eyes closed", "30 second limit", or "your teammate guides your hand". A perfect mix of artistic disaster and uncontrollable laughter, perfect for all ages and group sizes.',
     players: '3–16 Players',
     duration: '20–45 min',
     age: '8+',
     type: 'Creative / Party',
-    color: '#7c3aed',
+    color: '#ed5633',
     orderUrl: 'https://yasmedia.com/order',
   },
   'speed-race': {
     id: 'speed-race',
     emoji: '⚡',
-    name: 'Speed Race',
+    logoImg: 'assest/Mishakhet.svg',
+    name: 'Mishakhet',
     tagline: 'Blink and you lose.',
-    desc: 'Speed Race is a reaction-based adrenaline fest. Players face rapid-fire challenges testing reflexes, coordination, and quick thinking. Dodge obstacles, hit targets, and outlast your opponents in real-time rounds that get faster and more chaotic with every level. Built for competitive spirits and fast fingers.',
+    desc: 'Mishakhet is a reaction-based adrenaline fest. Players face rapid-fire challenges testing reflexes, coordination, and quick thinking. Dodge obstacles, hit targets, and outlast your opponents in real-time rounds that get faster and more chaotic with every level. Built for competitive spirits and fast fingers.',
     players: '2–12 Players',
     duration: '15–30 min',
     age: '10+',
     type: 'Action / Reaction',
     color: '#00d4ff',
     orderUrl: 'https://yasmedia.com/order',
+    comingSoon: true,
   },
   'word-clash': {
     id: 'word-clash',
     emoji: '💬',
-    name: 'Word Clash',
+    logoImg: 'assest/Asset 6.svg',
+    name: 'Five',
     tagline: 'Words are your weapons.',
-    desc: 'Word Clash is a dynamic wordplay battle with twists that keep every round fresh. Wildcards, reverse rounds, and surprise modifiers make it unpredictable and hilarious. Players earn points for creativity, speed, and cleverness — making it perfect for language lovers and party game fanatics alike.',
+    desc: 'Five is a dynamic wordplay battle with twists that keep every round fresh. Wildcards, reverse rounds, and surprise modifiers make it unpredictable and hilarious. Players earn points for creativity, speed, and cleverness — making it perfect for language lovers and party game fanatics alike.',
     players: '2–10 Players',
     duration: '25–50 min',
     age: '12+',
     type: 'Word / Strategy',
     color: '#f59e0b',
     orderUrl: 'https://yasmedia.com/order',
+    comingSoon: true,
   },
   'dare-drop': {
     id: 'dare-drop',
     emoji: '🎲',
-    name: 'Dare Drop',
+    logoImg: 'assest/Bairaq.svg',
+    name: 'Bairaq',
     tagline: 'Spin it. Face it. Own it.',
-    desc: 'Dare Drop reimagines the classic dare game with a digital twist. Spin the wheel to land on dares, challenges, truths, or wild card scenarios. With hundreds of prompts ranging from hilarious to boldly daring, no two games are ever the same. The ultimate icebreaker for any party or event.',
+    desc: 'Bairaq reimagines the classic dare game with a digital twist. Spin the wheel to land on dares, challenges, truths, or wild card scenarios. With hundreds of prompts ranging from hilarious to boldly daring, no two games are ever the same. The ultimate icebreaker for any party or event.',
     players: '2–20 Players',
     duration: '20–60 min',
     age: '16+',
     type: 'Party / Social',
     color: '#ec4899',
     orderUrl: 'https://yasmedia.com/order',
+    comingSoon: true,
   },
   'team-quest': {
     id: 'team-quest',
     emoji: '🚀',
-    name: 'Team Quest',
+    logoImg: 'assest/High Hand.svg',
+    name: 'High Hand',
     tagline: 'Together or nothing.',
-    desc: 'Team Quest is a cooperative adventure where communication and teamwork are your only weapons. Players must solve puzzles, complete missions, and survive challenges — together. With branching storylines and escalating difficulty, Team Quest is perfect for corporate events, team-building sessions, and groups who love a real challenge.',
+    desc: 'High Hand is a cooperative adventure where communication and teamwork are your only weapons. Players must solve puzzles, complete missions, and survive challenges — together. With branching storylines and escalating difficulty, High Hand is perfect for corporate events, team-building sessions, and groups who love a real challenge.',
     players: '4–24 Players',
     duration: '45–90 min',
     age: '14+',
     type: 'Co-op / Adventure',
     color: '#10b981',
     orderUrl: 'https://yasmedia.com/order',
+    comingSoon: true,
   },
 };
 
@@ -381,16 +392,27 @@ if (document.querySelector('.game-detail-hero')) {
     const moreContainer = $('#more-games');
     if (moreContainer) {
       const others = Object.values(GAMES).filter(g => g.id !== gameId).slice(0, 3);
-      moreContainer.innerHTML = others.map(g => `
-        <a href="game.html?id=${g.id}" class="glass-card game-card scroll-reveal" style="opacity:0; transform:translateY(30px);">
-          <div class="game-card-inner">
-            <div class="game-card-logo">${g.emoji}</div>
-            <h3 class="game-card-name">${g.name}</h3>
-            <p class="game-card-desc">${g.desc.substring(0, 100)}...</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
-          </div>
-        </a>
-      `).join('');
+      moreContainer.innerHTML = others.map(g => {
+        const logoHtml = g.logoImg
+          ? `<img src="${g.logoImg}" alt="${g.name}">`
+          : g.emoji;
+        const logoBg = g.logoBg || 'rgba(255,255,255,0.08)';
+        const logoBorder = g.logoBorderColor || 'rgba(255,255,255,0.12)';
+        const logoPadding = g.logoImg ? '14px' : '';
+        const soonBadge = g.comingSoon ? `<div class="coming-soon-badge">Coming Soon</div>` : '';
+        const soonStyle = g.comingSoon ? 'opacity:0.55; pointer-events:none;' : '';
+        return `
+          <a href="game.html?id=${g.id}" class="glass-card game-card${g.comingSoon ? ' game-card--soon' : ''} scroll-reveal" style="opacity:0; transform:translateY(30px); ${soonStyle}">
+            ${soonBadge}
+            <div class="game-card-inner">
+              <div class="game-card-logo" style="background:${logoBg}; border-color:${logoBorder}; padding:${logoPadding};">${logoHtml}</div>
+              <h3 class="game-card-name">${g.name}</h3>
+              <p class="game-card-desc">${g.desc.substring(0, 100)}...</p>
+              <div class="game-card-arrow">Explore <span>→</span></div>
+            </div>
+          </a>
+        `;
+      }).join('');
 
       // Re-init scroll reveal for dynamic cards
       setTimeout(() => {
