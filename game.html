@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Game Details — Jaming World</title>
+  <link rel="icon" href="assest/JWLOGO.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="page-transition" id="page-transition"></div>
+
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+<div id="scroll-progress"></div>
+
+<div class="bg-mesh">
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+</div>
+<canvas id="particles-canvas"></canvas>
+
+<!-- NAVBAR always visible on detail page -->
+<nav id="navbar" class="visible" style="transform:translateY(0); opacity:1;">
+  <div class="nav-logo">
+    <a href="index.html"><img src="assest/JWLOGO.svg" alt="Jaming World" /></a>
+  </div>
+  <ul class="nav-links">
+    <li><a href="index.html#what-is">About</a></li>
+    <li><a href="index.html#games">Games</a></li>
+    <li><a href="index.html#build-form">Build a Game</a></li>
+  </ul>
+  <a href="index.html#build-form" class="btn-primary nav-cta"><span>Start Your Game</span></a>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html#what-is">About</a>
+  <a href="index.html#games">Games</a>
+  <a href="index.html#build-form">Build a Game</a>
+</div>
+
+<main>
+  <div class="game-detail-hero">
+    <div class="section-inner" style="width:100%;">
+      <a href="index.html#games" class="back-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to World
+      </a>
+      <div class="game-detail-header">
+        <div class="game-detail-logo" id="detail-logo">🎮</div>
+        <div>
+          <h1 class="game-detail-title" id="detail-title">Loading...</h1>
+          <p class="game-detail-tagline" id="detail-tagline"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-detail-body">
+    <!-- Video / Preview -->
+    <div>
+      <div class="video-section glass-card" id="video-section">
+        <div class="video-placeholder">
+          <div class="play-icon" id="play-btn">▶</div>
+          <p id="video-label" style="font-size:1rem; font-weight:600; margin-top:8px;">Game Preview</p>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);">Click to watch the gameplay reel</p>
+        </div>
+      </div>
+
+      <!-- Game Description -->
+      <div class="glass-card" style="padding:36px; margin-top:24px;">
+        <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:16px; color:rgba(255,255,255,0.9);">About This Game</h3>
+        <p id="detail-desc" style="color:rgba(255,255,255,0.65); line-height:1.8; font-size:0.95rem;"></p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="game-sidebar">
+      <!-- Order -->
+      <div class="glass-card sidebar-card">
+        <h3>Get This Game</h3>
+        <a href="https://yasmedia.com/order" target="_blank" rel="noopener" class="btn-primary order-btn" id="order-btn">
+          <span>🛒 Order Now</span>
+        </a>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:12px;">You'll be redirected to our ordering system</p>
+      </div>
+
+      <!-- Download Manual -->
+      <div class="glass-card sidebar-card">
+        <h3>Game Manual</h3>
+        <a href="#" class="btn-glass download-btn" id="download-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download PDF
+        </a>
+      </div>
+
+      <!-- Game Info -->
+      <div class="glass-card sidebar-card">
+        <h3>Game Info</h3>
+        <div class="game-info-list" id="game-info-list">
+          <!-- filled by JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- More Games -->
+  <div style="max-width:1200px; margin:0 auto; padding:0 24px 100px;">
+    <div class="divider" style="margin-bottom:60px;"></div>
+    <p class="section-label scroll-reveal" style="justify-content:center; text-align:center;">More Games</p>
+    <div class="games-grid" id="more-games" style="margin-top:32px;"></div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="assest/JWLOGO.svg" alt="Jaming World" />
+    </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/jamingworld" target="_blank" rel="noopener" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        @jamingworld
+      </a>
+      <a href="https://www.tiktok.com/@jamingworld" target="_blank" rel="noopener" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
+        @jamingworld
+      </a>
+    </div>
+    <p class="footer-credit">Designed & Developed by <span>YAS</span></p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
