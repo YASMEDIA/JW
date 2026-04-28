@@ -1,3 +1,14 @@
+/* ===== SOMAR FONT ===== */
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Thin.otf') format('opentype'); font-weight: 100; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-ExtraLight.otf') format('opentype'); font-weight: 200; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Light.otf') format('opentype'); font-weight: 300; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Regular.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Medium.otf') format('opentype'); font-weight: 500; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-SemiBold.otf') format('opentype'); font-weight: 600; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Bold.otf') format('opentype'); font-weight: 700; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-ExtraBold.otf') format('opentype'); font-weight: 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Somar'; src: url('Fonts/Somar-Black.otf') format('opentype'); font-weight: 900; font-style: normal; font-display: swap; }
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -28,7 +39,7 @@
   --glow-blue: 0 0 40px rgba(26, 74, 255, 0.3);
   --glow-purple: 0 0 40px rgba(124, 58, 237, 0.3);
   --glow-cyan: 0 0 40px rgba(0, 212, 255, 0.3);
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-main: 'Somar', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --transition: cubic-bezier(0.4, 0, 0.2, 1);
   --radius: 20px;
   --radius-lg: 32px;
@@ -165,7 +176,7 @@ body {
 
 .orb-2 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, var(--purple), transparent);
+  background: radial-gradient(circle, var(--blue-glow), transparent);
   top: 30%; right: -5%;
   animation-delay: -4s;
 }
@@ -200,17 +211,30 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 20px 40px;
-  display: flex;
+  padding: 0 48px;
+  height: 72px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  background: rgba(15, 28, 58, 0.55);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-bottom: 1px solid var(--glass-border);
+  background: rgba(15, 28, 58, 0.6);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
   transform: translateY(-100%);
   transition: transform 0.5s var(--transition), opacity 0.5s ease;
   opacity: 0;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
 }
 
 #navbar.visible {
@@ -227,6 +251,7 @@ body {
   display: flex;
   gap: 32px;
   list-style: none;
+  justify-content: center;
 }
 
 .nav-links a {
@@ -311,7 +336,7 @@ main {
 .hero-headline {
   font-size: clamp(2.8rem, 7vw, 6rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.35;
   letter-spacing: -0.02em;
   margin-bottom: 24px;
   opacity: 0;
@@ -890,6 +915,7 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
+  direction: ltr;
   padding: 10px 20px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
@@ -914,6 +940,11 @@ footer {
   font-size: 0.8rem;
   color: var(--white-60);
   letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  direction: ltr;
+  white-space: nowrap;
 }
 
 .footer-credit span {
@@ -921,12 +952,20 @@ footer {
   font-weight: 600;
 }
 
+.footer-yas-link {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.footer-yas-link:hover { opacity: 1; }
+
 .footer-yas-logo {
   height: 16px;
   width: auto;
-  vertical-align: middle;
-  display: inline-block;
-  margin-left: 4px;
+  display: block;
 }
 
 /* ===== SECTION DIVIDER ===== */
@@ -940,10 +979,9 @@ footer {
 
 /* ===== GAME DETAIL PAGE ===== */
 .game-detail-hero {
-  min-height: 60vh;
   display: flex;
-  align-items: center;
-  padding: 120px 24px 80px;
+  align-items: flex-start;
+  padding: 120px 24px 60px;
 }
 
 .back-btn {
@@ -1209,7 +1247,9 @@ footer {
 
 @media (max-width: 768px) {
   #navbar {
-    padding: 16px 20px;
+    padding: 0 20px;
+    height: 64px;
+    grid-template-columns: auto 1fr;
   }
   .nav-links { display: none; }
   .hamburger { display: flex; }
@@ -1262,3 +1302,150 @@ footer {
 }
 
 .page-transition.active { opacity: 1; pointer-events: all; }
+
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.9);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 7px 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  flex-shrink: 0;
+}
+
+.lang-toggle:hover {
+  background: rgba(255,255,255,0.16);
+  border-color: rgba(255,255,255,0.3);
+  color: #fff;
+}
+
+.lang-toggle--mobile {
+  font-size: 1rem;
+  padding: 10px 28px;
+  margin-top: 8px;
+}
+
+/* ===== RTL / ARABIC OVERRIDES ===== */
+html[dir="rtl"] {
+  font-family: 'Somar', sans-serif;
+}
+
+/* Kill letter-spacing for Arabic — it breaks letter connections */
+html[dir="rtl"],
+html[dir="rtl"] * {
+  letter-spacing: 0 !important;
+}
+
+html[dir="rtl"] .neon-line {
+  transform-origin: right;
+}
+
+html[dir="rtl"] .arrow-icon {
+  display: inline-block;
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .back-btn svg {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .section-label {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .game-card-arrow {
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .footer-inner {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .nav-actions {
+  direction: ltr;
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .hero-cta-group {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .form-group label,
+html[dir="rtl"] .form-group input,
+html[dir="rtl"] .form-group textarea {
+  text-align: right;
+}
+
+html[dir="rtl"] .game-detail-header {
+  text-align: right;
+}
+
+html[dir="rtl"] .game-detail-tagline,
+html[dir="rtl"] .game-detail-title {
+  text-align: right;
+}
+
+html[dir="rtl"] .game-detail-hero .section-inner {
+  text-align: right;
+}
+
+html[dir="rtl"] .game-detail-body > div > .glass-card p,
+html[dir="rtl"] .game-detail-body > div > .glass-card h3 {
+  text-align: right;
+}
+
+html[dir="rtl"] .info-row .value {
+  direction: ltr;
+  text-align: left;
+}
+
+/* Feature cards */
+html[dir="rtl"] .feature-card {
+  text-align: right;
+}
+
+/* Section body text */
+html[dir="rtl"] .section-desc,
+html[dir="rtl"] .section-title {
+  text-align: right;
+}
+
+/* Game card body */
+html[dir="rtl"] .game-card-inner {
+  text-align: right;
+}
+
+html[dir="rtl"] .game-card-desc {
+  text-align: right;
+}
+
+/* Sidebar cards */
+html[dir="rtl"] .sidebar-card h3,
+html[dir="rtl"] .sidebar-card p {
+  text-align: right;
+}
+
+/* About section */
+html[dir="rtl"] .about-desc,
+html[dir="rtl"] .about-text {
+  text-align: right;
+}
+
+/* Footer socials direction */
+html[dir="rtl"] .footer-socials {
+  flex-direction: row-reverse;
+}
+
+/* Ensure YAS footer link stays LTR */
+html[dir="rtl"] .footer-credit {
+  direction: ltr;
+}

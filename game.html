@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Game Details — Jaming World</title>
-  <link rel="icon" href="assest/JWLOGO.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>Game Details — عالم جيمنق</title>
+  <link rel="icon" href="assest/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assest/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -28,23 +26,27 @@
 <!-- NAVBAR always visible on detail page -->
 <nav id="navbar" class="visible" style="transform:translateY(0); opacity:1;">
   <div class="nav-logo">
-    <a href="index.html"><img src="assest/JWLOGO.svg" alt="Jaming World" /></a>
+    <a href="index.html"><img src="assest/JWLOGO.svg" alt="عالم جيمنق" /></a>
   </div>
   <ul class="nav-links">
-    <li><a href="index.html#what-is">About</a></li>
-    <li><a href="index.html#games">Games</a></li>
-    <li><a href="index.html#build-form">Build a Game</a></li>
+    <li><a href="index.html#what-is" data-i18n="nav.about">About</a></li>
+    <li><a href="index.html#games" data-i18n="nav.games">Games</a></li>
+    <li><a href="index.html#build-form" data-i18n="nav.build">Build a Game</a></li>
   </ul>
-  <a href="index.html#build-form" class="btn-primary nav-cta"><span>Start Your Game</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-actions">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">عربي</button>
+    <a href="index.html#build-form" class="btn-primary nav-cta"><span data-i18n="nav.cta">Start Your Game</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <div class="mobile-nav" id="mobile-nav">
-  <a href="index.html#what-is">About</a>
-  <a href="index.html#games">Games</a>
-  <a href="index.html#build-form">Build a Game</a>
+  <a href="index.html#what-is" data-i18n="nav.about">About</a>
+  <a href="index.html#games" data-i18n="nav.games">Games</a>
+  <a href="index.html#build-form" data-i18n="nav.build">Build a Game</a>
+  <button class="lang-toggle lang-toggle--mobile" id="lang-toggle-mobile" aria-label="Switch language">عربي</button>
 </div>
 
 <main>
@@ -52,7 +54,7 @@
     <div class="section-inner" style="width:100%;">
       <a href="index.html#games" class="back-btn">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Back to World
+        <span data-i18n="back">Back to World</span>
       </a>
       <div class="game-detail-header">
         <div class="game-detail-logo" id="detail-logo">🎮</div>
@@ -71,13 +73,13 @@
         <div class="video-placeholder">
           <div class="play-icon" id="play-btn">▶</div>
           <p id="video-label" style="font-size:1rem; font-weight:600; margin-top:8px;">Game Preview</p>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);">Click to watch the gameplay reel</p>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);" data-i18n="detail.video.sub">Click to watch the gameplay reel</p>
         </div>
       </div>
 
       <!-- Game Description -->
       <div class="glass-card" style="padding:36px; margin-top:24px;">
-        <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:16px; color:rgba(255,255,255,0.9);">About This Game</h3>
+        <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:16px; color:rgba(255,255,255,0.9);" data-i18n="detail.about">About This Game</h3>
         <p id="detail-desc" style="color:rgba(255,255,255,0.65); line-height:1.8; font-size:0.95rem;"></p>
       </div>
     </div>
@@ -86,25 +88,25 @@
     <div class="game-sidebar">
       <!-- Order -->
       <div class="glass-card sidebar-card">
-        <h3>Get This Game</h3>
+        <h3 data-i18n="detail.get">Get This Game</h3>
         <a href="https://yasmedia.com/order" target="_blank" rel="noopener" class="btn-primary order-btn" id="order-btn">
-          <span>🛒 Order Now</span>
+          <span data-i18n="detail.order">🛒 Order Now</span>
         </a>
-        <p style="font-size:0.78rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:12px;">You'll be redirected to our ordering system</p>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:12px;" data-i18n="detail.redirect">You'll be redirected to our ordering system</p>
       </div>
 
       <!-- Download Manual -->
       <div class="glass-card sidebar-card">
-        <h3>Game Manual</h3>
+        <h3 data-i18n="detail.manual">Game Manual</h3>
         <a href="#" class="btn-glass download-btn" id="download-btn">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download PDF
+          <span data-i18n="detail.manual.btn">Download PDF</span>
         </a>
       </div>
 
       <!-- Game Info -->
       <div class="glass-card sidebar-card">
-        <h3>Game Info</h3>
+        <h3 data-i18n="detail.info">Game Info</h3>
         <div class="game-info-list" id="game-info-list">
           <!-- filled by JS -->
         </div>
@@ -115,7 +117,7 @@
   <!-- More Games -->
   <div style="max-width:1200px; margin:0 auto; padding:0 24px 100px;">
     <div class="divider" style="margin-bottom:60px;"></div>
-    <p class="section-label scroll-reveal" style="justify-content:center; text-align:center;">More Games</p>
+    <p class="section-label scroll-reveal" style="justify-content:center; text-align:center;" data-i18n="detail.more">More Games</p>
     <div class="games-grid" id="more-games" style="margin-top:32px;"></div>
   </div>
 </main>
@@ -123,7 +125,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="assest/JWLOGO.svg" alt="Jaming World" />
+      <img src="assest/JWLOGO.svg" alt="عالم جيمنق" />
     </div>
     <div class="footer-socials">
       <a href="https://www.instagram.com/jamingworld" target="_blank" rel="noopener" class="social-link">
@@ -134,8 +136,12 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
         @jamingworld
       </a>
+      <a href="https://www.youtube.com/@JamingWorld" target="_blank" rel="noopener" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        @JamingWorld
+      </a>
     </div>
-    <p class="footer-credit">Designed & Developed by <span>YAS</span></p>
+    <p class="footer-credit" dir="ltr">Designed &amp; Developed by <a href="https://yasmedia.com" target="_blank" rel="noopener" class="footer-yas-link"><img src="assest/YAS.svg" alt="YAS" class="footer-yas-logo" /></a></p>
   </div>
 </footer>
 

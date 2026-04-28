@@ -26,15 +26,17 @@ const GAMES = {
     logoImg: 'assest/Deera.svg',
     logoBg: '#ed5633',
     logoBorderColor: 'rgba(237,86,51,0.4)',
-    name: 'Al-Deera',
-    tagline: 'Sketch fast. Guess faster.',
-    desc: 'Al-Deera is pure chaotic creativity. One player draws, the rest guess — but with wild modifiers like "draw with your eyes closed", "30 second limit", or "your teammate guides your hand". A perfect mix of artistic disaster and uncontrollable laughter, perfect for all ages and group sizes.',
-    players: '3–16 Players',
-    duration: '20–45 min',
-    age: '8+',
+    name: 'Deera',
+    tagline: 'Move. Cooperate. Win.',
+    desc: `A strategic team-based board game that blends movement, tactics, and cooperation.<br>Each player controls specific pieces, using dice to advance and navigate the board toward the center to win.`,
+    players: '4 Players',
+    duration: '40+ min',
+    age: '9+',
     type: 'Creative / Party',
     color: '#ed5633',
-    orderUrl: 'https://yasmedia.com/order',
+    orderUrl: 'https://jaming-holding.com/product/3-الديرة',
+    videoId: 'k1hY65vrYFI',
+    videoStart: 3,
   },
   'speed-race': {
     id: 'speed-race',
@@ -101,6 +103,175 @@ const GAMES = {
 // ===== UTILITY =====
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
+
+// ===== I18N =====
+const I18N = {
+  en: {
+    'loading': 'Loading Game Experience...',
+    'nav.about': 'About',
+    'nav.games': 'Games',
+    'nav.build': 'Build a Game',
+    'nav.cta': 'Start Your Game',
+    'hero.headline': 'Not Just a Game…<br />It\'s a <span class="highlight">World</span>',
+    'hero.sub': '<span>Play.</span> &nbsp;Compete. &nbsp;<span>Laugh.</span>',
+    'hero.explore': 'Explore Games',
+    'hero.build': 'Build Your Game →',
+    'about.label': 'The Universe',
+    'about.title': 'What is <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Jaming World?</span>',
+    'about.desc': 'A universe of social games designed for real fun — group experiences that bring people together through play, challenges, and laughter.',
+    'feat1.title': 'Social Games',
+    'feat1.desc': 'Multiplayer experiences designed to be played together — in person or online.',
+    'feat2.title': 'Compete & Win',
+    'feat2.desc': 'Leaderboards, challenges, and bragging rights for the ultimate champions.',
+    'feat3.title': 'Pure Fun',
+    'feat3.desc': 'Every game is crafted to make you laugh, connect, and create memories.',
+    'feat4.title': 'Group Experiences',
+    'feat4.desc': 'From small gatherings to big events — Jaming World scales with your crew.',
+    'games.label': 'The Arena',
+    'games.title': 'Choose Your <span style="background:linear-gradient(135deg,#9d5cff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Game</span>',
+    'games.desc': 'Each game is a world of its own. Tap to dive in.',
+    'card.explore': 'Explore',
+    'card.soon': 'Coming Soon',
+    'card.99.desc': 'A fast-paced deception game where you bluff, convince, and outsmart your friends. Can you fake the truth… or will you get exposed?',
+    'card.deera.desc': 'A strategic team game where players move, cooperate, and race to the center using dice. 🎮',
+    'card.mishakhet.desc': 'Reaction-based chaos. Hit, dodge, and race your way to victory in real-time.',
+    'card.five.desc': 'Wordplay battles with twists, wildcards, and surprise round modifiers.',
+    'card.bairaq.desc': 'Spin the wheel and face the dare. The classic party game, reimagined.',
+    'card.highhand.desc': 'Cooperative missions where your team must work together or face game over.',
+    'form.label': 'Game Creator',
+    'form.title': 'Have a Game Idea?',
+    'form.desc': "Tell us your vision. We'll help you build the next game world.",
+    'form.name.label': 'Your Name',
+    'form.name.placeholder': "What's your name?",
+    'form.phone.label': 'Phone Number',
+    'form.phone.placeholder': '+965 xxxx xxxx',
+    'form.email.label': 'Email Address',
+    'form.email.placeholder': 'you@example.com',
+    'form.idea.label': 'Your Game Idea',
+    'form.idea.placeholder': 'Describe your game concept — mechanics, theme, players, vibe...',
+    'form.submit': '🎮 Start Your Game',
+    'form.success.title': 'Your idea has been received!',
+    'form.success.sub': 'Our team will contact you within 24 hours.',
+    'footer.credit': 'Designed & Developed by',
+    'back': 'Back to World',
+    'detail.about': 'About This Game',
+    'detail.get': 'Get This Game',
+    'detail.order': '🛒 Order Now',
+    'detail.download': '⬇️ Download Now',
+    'detail.redirect': "You'll be redirected to our ordering system",
+    'detail.manual': 'Game Manual',
+    'detail.manual.btn': 'Download PDF',
+    'detail.info': 'Game Info',
+    'detail.more': 'More Games',
+    'detail.video.sub': 'Click to watch the gameplay reel',
+    'info.players': 'Players',
+    'info.duration': 'Duration',
+    'info.age': 'Age',
+    'info.type': 'Type',
+  },
+  ar: {
+    'loading': 'جاري تحميل تجربة الألعاب...',
+    'nav.about': 'عن العالم',
+    'nav.games': 'الألعاب',
+    'nav.build': 'ابنِ لعبتك',
+    'nav.cta': 'ابدأ لعبتك',
+    'hero.headline': 'ليست مجرد لعبة…<br />إنها <span class="highlight">عالم</span>',
+    'hero.sub': '<span>العب.</span> &nbsp;تنافس. &nbsp;<span>اضحك.</span>',
+    'hero.explore': 'استكشف الألعاب',
+    'hero.build': '← ابنِ لعبتك',
+    'about.label': 'الكون',
+    'about.title': 'ما هو <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Jaming World؟</span>',
+    'about.desc': 'عالم من الألعاب الاجتماعية صُمِّم للمتعة الحقيقية — تجارب جماعية تجمع الناس معاً بالضحك والتحدي واللعب.',
+    'feat1.title': 'ألعاب اجتماعية',
+    'feat1.desc': 'تجارب متعددة اللاعبين مصممة للعب المشترك — حضورياً أو أونلاين.',
+    'feat2.title': 'تنافس وانتصر',
+    'feat2.desc': 'قوائم النتائج والتحديات وحقوق التباهي للأبطال الحقيقيين.',
+    'feat3.title': 'متعة خالصة',
+    'feat3.desc': 'كل لعبة مصممة لتضحك وتتواصل وتصنع ذكريات لا تُنسى.',
+    'feat4.title': 'تجارب جماعية',
+    'feat4.desc': 'من التجمعات الصغيرة إلى الفعاليات الكبيرة — Jaming World يتأقلم مع مجموعتك.',
+    'games.label': 'الساحة',
+    'games.title': 'اختر <span style="background:linear-gradient(135deg,#9d5cff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">لعبتك</span>',
+    'games.desc': 'كل لعبة عالم منفصل. اضغط وانطلق.',
+    'card.explore': 'استكشف',
+    'card.soon': 'قريباً',
+    'card.99.desc': 'لعبة خداع سريعة حيث تكذب وتقنع وتتفوق على أصدقائك. هل تستطيع تزوير الحقيقة… أم ستُكشف؟',
+    'card.deera.desc': 'لعبة استراتيجية جماعية حيث يتنافس اللاعبون بالنرد للوصول إلى المركز. 🎮',
+    'card.mishakhet.desc': 'فوضى مبنية على ردود الأفعال. اضرب، تهرّب، وتسابق نحو النصر في الوقت الحقيقي.',
+    'card.five.desc': 'معارك الكلمات مع تويستات وبطاقات وحشية ومعدِّلات جولات مفاجئة.',
+    'card.bairaq.desc': 'أدر العجلة وواجه التحدي. لعبة الحفلات الكلاسيكية بتصور جديد.',
+    'card.highhand.desc': 'مهمات تعاونية حيث يجب أن يعمل فريقك معاً أو تواجهون نهاية اللعبة.',
+    'form.label': 'صانع الألعاب',
+    'form.title': 'هل لديك فكرة لعبة؟',
+    'form.desc': 'أخبرنا بفكرتك. سنساعدك في بناء عالم لعبتك القادم.',
+    'form.name.label': 'اسمك',
+    'form.name.placeholder': 'ما اسمك؟',
+    'form.phone.label': 'رقم الهاتف',
+    'form.phone.placeholder': '+965 xxxx xxxx',
+    'form.email.label': 'البريد الإلكتروني',
+    'form.email.placeholder': 'example@email.com',
+    'form.idea.label': 'فكرة لعبتك',
+    'form.idea.placeholder': 'صف مفهوم لعبتك — الآليات والموضوع وعدد اللاعبين والأجواء...',
+    'form.submit': 'ابدأ لعبتك',
+    'form.success.title': 'وصلتنا فكرتك!',
+    'form.success.sub': 'سيتواصل معك فريقنا خلال 24 ساعة.',
+    'footer.credit': 'تصميم وتطوير',
+    'back': 'العودة للعالم',
+    'detail.about': 'عن اللعبة',
+    'detail.get': 'احصل على اللعبة',
+    'detail.order': 'اطلب الآن',
+    'detail.download': '⬇️ حمّل الآن',
+    'detail.redirect': 'ستُحوَّل إلى نظام الطلبات',
+    'detail.manual': 'دليل اللعبة',
+    'detail.manual.btn': 'تحميل PDF',
+    'detail.info': 'معلومات اللعبة',
+    'detail.more': 'المزيد من الألعاب',
+    'detail.video.sub': 'اضغط لمشاهدة مقطع اللعبة',
+    'info.players': 'اللاعبون',
+    'info.duration': 'المدة',
+    'info.age': 'العمر',
+    'info.type': 'النوع',
+  },
+};
+
+function getLang() {
+  return document.documentElement.lang || localStorage.getItem('jw-lang') || 'en';
+}
+
+function setLanguage(lang) {
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  localStorage.setItem('jw-lang', lang);
+
+  const label = lang === 'en' ? 'عربي' : 'English';
+  $$('#lang-toggle, #lang-toggle-mobile').forEach(btn => { if (btn) btn.textContent = label; });
+
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const val = I18N[lang]?.[el.dataset.i18n];
+    if (val !== undefined) el.textContent = val;
+  });
+
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const val = I18N[lang]?.[el.dataset.i18nHtml];
+    if (val !== undefined) el.innerHTML = val;
+  });
+
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const val = I18N[lang]?.[el.dataset.i18nPlaceholder];
+    if (val !== undefined) el.placeholder = val;
+  });
+}
+
+// Init language on page load
+(function () {
+  const saved = localStorage.getItem('jw-lang') || 'en';
+  setLanguage(saved);
+  $$('#lang-toggle, #lang-toggle-mobile').forEach(btn => {
+    btn?.addEventListener('click', () => {
+      setLanguage(getLang() === 'en' ? 'ar' : 'en');
+    });
+  });
+})();
 
 // ===== LOADING SCREEN =====
 window.addEventListener('load', () => {
@@ -365,7 +536,8 @@ if (document.querySelector('.game-detail-hero')) {
     // Embed YouTube video if videoId provided
     const videoSection = $('#video-section');
     if (videoSection && game.videoId) {
-      videoSection.innerHTML = `<iframe src="https://www.youtube.com/embed/${game.videoId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--radius-lg);"></iframe>`;
+      const startParam = game.videoStart ? `?start=${game.videoStart}` : '';
+      videoSection.innerHTML = `<iframe src="https://www.youtube.com/embed/${game.videoId}${startParam}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--radius-lg);"></iframe>`;
       videoSection.style.position = 'relative';
     } else if (videoLabel) {
       videoLabel.textContent = `${game.name} — Gameplay Reel`;
@@ -377,11 +549,13 @@ if (document.querySelector('.game-detail-hero')) {
 
     // Info rows
     if (infoList) {
+      const lang = getLang();
+      const t = (k) => I18N[lang]?.[k] || k;
       const rows = [
-        { label: 'Players', value: game.players },
-        { label: 'Duration', value: game.duration },
-        { label: 'Age', value: game.age },
-        { label: 'Type', value: game.type },
+        { label: t('info.players'), value: game.players },
+        { label: t('info.duration'), value: game.duration },
+        { label: t('info.age'), value: game.age },
+        { label: t('info.type'), value: game.type },
       ];
       infoList.innerHTML = rows.map(r =>
         `<div class="info-row"><span class="label">${r.label}</span><span class="value">${r.value}</span></div>`
@@ -399,7 +573,10 @@ if (document.querySelector('.game-detail-hero')) {
         const logoBg = g.logoBg || 'rgba(255,255,255,0.08)';
         const logoBorder = g.logoBorderColor || 'rgba(255,255,255,0.12)';
         const logoPadding = g.logoImg ? '14px' : '';
-        const soonBadge = g.comingSoon ? `<div class="coming-soon-badge">Coming Soon</div>` : '';
+        const lang = getLang();
+        const soonLabel = I18N[lang]?.['card.soon'] || 'Coming Soon';
+        const exploreLabel = I18N[lang]?.['card.explore'] || 'Explore';
+        const soonBadge = g.comingSoon ? `<div class="coming-soon-badge">${soonLabel}</div>` : '';
         const soonStyle = g.comingSoon ? 'opacity:0.55; pointer-events:none;' : '';
         return `
           <a href="game.html?id=${g.id}" class="glass-card game-card${g.comingSoon ? ' game-card--soon' : ''} scroll-reveal" style="opacity:0; transform:translateY(30px); ${soonStyle}">
@@ -408,7 +585,7 @@ if (document.querySelector('.game-detail-hero')) {
               <div class="game-card-logo" style="background:${logoBg}; border-color:${logoBorder}; padding:${logoPadding};">${logoHtml}</div>
               <h3 class="game-card-name">${g.name}</h3>
               <p class="game-card-desc">${g.desc.substring(0, 100)}...</p>
-              <div class="game-card-arrow">Explore <span>→</span></div>
+              <div class="game-card-arrow"><span>${exploreLabel}</span> <span class="arrow-icon">→</span></div>
             </div>
           </a>
         `;

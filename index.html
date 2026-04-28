@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jaming World — Not Just a Game, It's a World</title>
-  <meta name="description" content="Play. Compete. Laugh. Jaming World is a social gaming universe built for fun, challenges, and unforgettable group experiences." />
-  <link rel="icon" href="assest/JWLOGO.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>Jaming World عالم جيمنق</title>
+  <meta name="description" content="Play. Compete. Laugh. عالم جيمنق is a social gaming universe built for fun, challenges, and unforgettable group experiences." />
+  <link rel="icon" href="assest/favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assest/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,8 +16,8 @@
 
 <!-- ===== LOADING SCREEN ===== -->
 <div id="loading-screen">
-  <img src="assest/JWLOGO.svg" alt="Jaming World" class="loading-logo" />
-  <p class="loading-text">Loading Game Experience...</p>
+  <img src="assest/JWLOGO.svg" alt="عالم جيمنق" class="loading-logo" />
+  <p class="loading-text" data-i18n="loading">Loading Game Experience...</p>
   <div class="loading-bar-wrap">
     <div class="loading-bar"></div>
   </div>
@@ -40,76 +38,79 @@
 </div>
 <canvas id="particles-canvas"></canvas>
 
-<!-- ===== NAVBAR (appears after scroll) ===== -->
+<!-- ===== NAVBAR ===== -->
 <nav id="navbar">
   <div class="nav-logo">
-    <a href="index.html"><img src="assest/JWLOGO.svg" alt="Jaming World" /></a>
+    <a href="index.html"><img src="assest/JWLOGO.svg" alt="عالم جيمنق" /></a>
   </div>
   <ul class="nav-links">
-    <li><a href="#what-is">About</a></li>
-    <li><a href="#games">Games</a></li>
-    <li><a href="#build-form">Build a Game</a></li>
+    <li><a href="#what-is" data-i18n="nav.about">About</a></li>
+    <li><a href="#games" data-i18n="nav.games">Games</a></li>
+    <li><a href="#build-form" data-i18n="nav.build">Build a Game</a></li>
   </ul>
-  <a href="#build-form" class="btn-primary nav-cta"><span>Start Your Game</span></a>
-  <button class="hamburger" id="hamburger" aria-label="Menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-actions">
+    <button class="lang-toggle" id="lang-toggle" aria-label="Switch language">عربي</button>
+    <a href="#build-form" class="btn-primary nav-cta"><span data-i18n="nav.cta">Start Your Game</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- Mobile nav -->
 <div class="mobile-nav" id="mobile-nav">
-  <a href="#what-is" class="mobile-nav-link">About</a>
-  <a href="#games" class="mobile-nav-link">Games</a>
-  <a href="#build-form" class="mobile-nav-link">Build a Game</a>
+  <a href="#what-is" class="mobile-nav-link" data-i18n="nav.about">About</a>
+  <a href="#games" class="mobile-nav-link" data-i18n="nav.games">Games</a>
+  <a href="#build-form" class="mobile-nav-link" data-i18n="nav.build">Build a Game</a>
+  <button class="lang-toggle lang-toggle--mobile" id="lang-toggle-mobile" aria-label="Switch language">عربي</button>
 </div>
 
 <main>
   <!-- ===== SECTION 1: HERO ===== -->
   <section id="hero">
-    <img src="assest/JWLOGO.svg" alt="Jaming World Logo" class="hero-logo" />
-    <h1 class="hero-headline">
-      Not Just a Game…<br />It's a <span class="highlight">World</span>
+    <img src="assest/JWLOGO.svg" alt="عالم جيمنق Logo" class="hero-logo" />
+    <h1 class="hero-headline" data-i18n-html="hero.headline">
+      A Beautiful World…<br />of <span class="highlight">Games</span>
     </h1>
-    <p class="hero-sub">
+    <p class="hero-sub" data-i18n-html="hero.sub">
       <span>Play.</span> &nbsp;Compete. &nbsp;<span>Laugh.</span>
     </p>
     <div class="hero-cta-group">
-      <a href="#games" class="btn-primary"><span>Explore Games</span></a>
-      <a href="#build-form" class="btn-glass">Build Your Game →</a>
+      <a href="#games" class="btn-primary"><span data-i18n="hero.explore">Explore Games</span></a>
+      <a href="#build-form" class="btn-glass" data-i18n="hero.build">Build Your Game →</a>
     </div>
-
   </section>
 
   <!-- ===== SECTION 2: WHAT IS JAMING WORLD ===== -->
   <section id="what-is">
     <div class="section-inner">
-      <p class="section-label scroll-reveal">The Universe</p>
+      <p class="section-label scroll-reveal" data-i18n="about.label">The Universe</p>
       <div class="neon-line scroll-reveal"></div>
-      <h2 class="section-title scroll-reveal">What is <span style="background: linear-gradient(135deg,#6fa3ff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Jaming World?</span></h2>
-      <p class="section-desc scroll-reveal">
+      <h2 class="section-title scroll-reveal" data-i18n-html="about.title">What is <span style="background: linear-gradient(135deg,#6fa3ff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">عالم جيمنق?</span></h2>
+      <p class="section-desc scroll-reveal" data-i18n="about.desc">
         A universe of social games designed for real fun — group experiences that bring people together through play, challenges, and laughter.
       </p>
 
       <div class="features-grid">
         <div class="glass-card feature-card scroll-reveal">
           <div class="feature-icon">🎮</div>
-          <h3 class="feature-title">Social Games</h3>
-          <p class="feature-desc">Multiplayer experiences designed to be played together — in person or online.</p>
+          <h3 class="feature-title" data-i18n="feat1.title">Social Games</h3>
+          <p class="feature-desc" data-i18n="feat1.desc">Multiplayer experiences designed to be played together — in person or online.</p>
         </div>
         <div class="glass-card feature-card scroll-reveal" style="transition-delay:0.1s">
           <div class="feature-icon">🏆</div>
-          <h3 class="feature-title">Compete & Win</h3>
-          <p class="feature-desc">Leaderboards, challenges, and bragging rights for the ultimate champions.</p>
+          <h3 class="feature-title" data-i18n="feat2.title">Compete & Win</h3>
+          <p class="feature-desc" data-i18n="feat2.desc">Leaderboards, challenges, and bragging rights for the ultimate champions.</p>
         </div>
         <div class="glass-card feature-card scroll-reveal" style="transition-delay:0.2s">
           <div class="feature-icon">😂</div>
-          <h3 class="feature-title">Pure Fun</h3>
-          <p class="feature-desc">Every game is crafted to make you laugh, connect, and create memories.</p>
+          <h3 class="feature-title" data-i18n="feat3.title">Pure Fun</h3>
+          <p class="feature-desc" data-i18n="feat3.desc">Every game is crafted to make you laugh, connect, and create memories.</p>
         </div>
         <div class="glass-card feature-card scroll-reveal" style="transition-delay:0.3s">
           <div class="feature-icon">🌍</div>
-          <h3 class="feature-title">Group Experiences</h3>
-          <p class="feature-desc">From small gatherings to big events — Jaming World scales with your crew.</p>
+          <h3 class="feature-title" data-i18n="feat4.title">Group Experiences</h3>
+          <p class="feature-desc" data-i18n="feat4.desc">From small gatherings to big events — عالم جيمنق scales with your crew.</p>
         </div>
       </div>
     </div>
@@ -120,10 +121,10 @@
   <!-- ===== SECTION 3: GAMES SHOWCASE ===== -->
   <section id="games">
     <div class="section-inner">
-      <p class="section-label scroll-reveal">The Arena</p>
+      <p class="section-label scroll-reveal" data-i18n="games.label">The Arena</p>
       <div class="neon-line scroll-reveal"></div>
-      <h2 class="section-title scroll-reveal">Choose Your <span style="background: linear-gradient(135deg,#9d5cff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Game</span></h2>
-      <p class="section-desc scroll-reveal">Each game is a world of its own. Tap to dive in.</p>
+      <h2 class="section-title scroll-reveal" data-i18n-html="games.title">Choose Your <span style="background: linear-gradient(135deg,#9d5cff,#00d4ff); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;">Game</span></h2>
+      <p class="section-desc scroll-reveal" data-i18n="games.desc">Each game is a world of its own. Tap to dive in.</p>
 
       <div class="games-grid">
 
@@ -133,73 +134,73 @@
             <div class="game-card-logo" style="background:#000; border-color:rgba(255,0,10,0.3);">
               <img src="assest/99.svg" alt="9ayad x Na9ab">
             </div>
-            <h3 class="game-card-name">9ayad x Na9ab</h3>
-            <p class="game-card-desc">Battle your friends with lightning-fast trivia questions across 20+ categories.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.99.name">9ayad x Na9ab</h3>
+            <p class="game-card-desc" data-i18n="card.99.desc">A fast-paced deception game where you bluff, convince, and outsmart your friends. Can you fake the truth… or will you get exposed?</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
-        <a href="game.html?id=draw-blast" class="glass-card game-card scroll-reveal" data-glow="#7c3aed" style="transition-delay:0.1s">
-          <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(124,58,237,0.15), transparent 70%)"></div>
+        <a href="game.html?id=draw-blast" class="glass-card game-card scroll-reveal" data-glow="#ed5633" style="transition-delay:0.1s">
+          <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(237,86,51,0.15), transparent 70%)"></div>
           <div class="game-card-inner">
             <div class="game-card-logo" style="background:#ed5633; border-color:rgba(237,86,51,0.4);">
-              <img src="assest/Deera.svg" alt="Al-Deera">
+              <img src="assest/Deera.svg" alt="Deera">
             </div>
-            <h3 class="game-card-name">Al-Deera</h3>
-            <p class="game-card-desc">Sketch fast, guess faster. The chaotic drawing game where anything goes.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.deera.name">Deera</h3>
+            <p class="game-card-desc" data-i18n="card.deera.desc">A strategic team game where players move, cooperate, and race to the center using dice.</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
         <a href="game.html?id=speed-race" class="glass-card game-card game-card--soon scroll-reveal" data-glow="#00d4ff" style="transition-delay:0.2s; pointer-events:none;">
           <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(0,212,255,0.12), transparent 70%)"></div>
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge" data-i18n="card.soon">Coming Soon</div>
           <div class="game-card-inner">
             <div class="game-card-logo">
               <img src="assest/Mishakhet.svg" alt="Mishakhet">
             </div>
-            <h3 class="game-card-name">Mishakhet</h3>
-            <p class="game-card-desc">Reaction-based chaos. Hit, dodge, and race your way to victory in real-time.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.mishakhet.name">Mishakhet</h3>
+            <p class="game-card-desc" data-i18n="card.mishakhet.desc">Reaction-based chaos. Hit, dodge, and race your way to victory in real-time.</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
         <a href="game.html?id=word-clash" class="glass-card game-card game-card--soon scroll-reveal" style="transition-delay:0.3s; pointer-events:none;">
           <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(255,180,0,0.1), transparent 70%)"></div>
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge" data-i18n="card.soon">Coming Soon</div>
           <div class="game-card-inner">
             <div class="game-card-logo">
               <img src="assest/Asset 6.svg" alt="Five">
             </div>
-            <h3 class="game-card-name">Five</h3>
-            <p class="game-card-desc">Wordplay battles with twists, wildcards, and surprise round modifiers.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.five.name">Five</h3>
+            <p class="game-card-desc" data-i18n="card.five.desc">Wordplay battles with twists, wildcards, and surprise round modifiers.</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
         <a href="game.html?id=dare-drop" class="glass-card game-card game-card--soon scroll-reveal" style="transition-delay:0.1s; pointer-events:none;">
           <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(255,60,120,0.12), transparent 70%)"></div>
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge" data-i18n="card.soon">Coming Soon</div>
           <div class="game-card-inner">
             <div class="game-card-logo">
               <img src="assest/Bairaq.svg" alt="Bairaq">
             </div>
-            <h3 class="game-card-name">Bairaq</h3>
-            <p class="game-card-desc">Spin the wheel and face the dare. The classic party game, reimagined.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.bairaq.name">Bairaq</h3>
+            <p class="game-card-desc" data-i18n="card.bairaq.desc">Spin the wheel and face the dare. The classic party game, reimagined.</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
         <a href="game.html?id=team-quest" class="glass-card game-card game-card--soon scroll-reveal" style="transition-delay:0.2s; pointer-events:none;">
           <div class="game-card-glow" style="background: radial-gradient(circle at 50% 50%, rgba(0,255,160,0.1), transparent 70%)"></div>
-          <div class="coming-soon-badge">Coming Soon</div>
+          <div class="coming-soon-badge" data-i18n="card.soon">Coming Soon</div>
           <div class="game-card-inner">
             <div class="game-card-logo">
               <img src="assest/High Hand.svg" alt="High Hand">
             </div>
-            <h3 class="game-card-name">High Hand</h3>
-            <p class="game-card-desc">Cooperative missions where your team must work together or face game over.</p>
-            <div class="game-card-arrow">Explore <span>→</span></div>
+            <h3 class="game-card-name" data-i18n="card.highhand.name">High Hand</h3>
+            <p class="game-card-desc" data-i18n="card.highhand.desc">Cooperative missions where your team must work together or face game over.</p>
+            <div class="game-card-arrow"><span data-i18n="card.explore">Explore</span> <span class="arrow-icon">→</span></div>
           </div>
         </a>
 
@@ -212,38 +213,38 @@
   <!-- ===== SECTION 5: BUILD FORM ===== -->
   <section id="build-form">
     <div class="section-inner" style="text-align:center;">
-      <p class="section-label scroll-reveal" style="justify-content:center;">Game Creator</p>
+      <p class="section-label scroll-reveal" style="justify-content:center;" data-i18n="form.label">Game Creator</p>
       <div class="neon-line scroll-reveal" style="margin:20px auto 40px;"></div>
-      <h2 class="section-title scroll-reveal">Have a Game Idea?</h2>
-      <p class="section-desc scroll-reveal" style="margin:0 auto;">Tell us your vision. We'll help you build the next game world.</p>
+      <h2 class="section-title scroll-reveal" data-i18n="form.title">Have a Game Idea?</h2>
+      <p class="section-desc scroll-reveal" style="margin:0 auto;" data-i18n="form.desc">Tell us your vision. We'll help you build the next game world.</p>
 
       <div class="glass-card form-wrapper scroll-reveal">
         <form id="game-idea-form">
           <div class="form-grid">
             <div class="form-group">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" placeholder="What's your name?" required />
+              <label for="name" data-i18n="form.name.label">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="What's your name?" data-i18n-placeholder="form.name.placeholder" required />
             </div>
             <div class="form-group">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" placeholder="+965 xxxx xxxx" required />
+              <label for="phone" data-i18n="form.phone.label">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="+965 xxxx xxxx" data-i18n-placeholder="form.phone.placeholder" required />
             </div>
             <div class="form-group full">
-              <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <label for="email" data-i18n="form.email.label">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" data-i18n-placeholder="form.email.placeholder" required />
             </div>
             <div class="form-group full">
-              <label for="idea">Your Game Idea</label>
-              <textarea id="idea" name="idea" placeholder="Describe your game concept — mechanics, theme, players, vibe..." required></textarea>
+              <label for="idea" data-i18n="form.idea.label">Your Game Idea</label>
+              <textarea id="idea" name="idea" placeholder="Describe your game concept — mechanics, theme, players, vibe..." data-i18n-placeholder="form.idea.placeholder" required></textarea>
             </div>
           </div>
-          <button type="submit" class="btn-primary form-submit"><span>🎮 Start Your Game</span></button>
+          <button type="submit" class="btn-primary form-submit"><span data-i18n="form.submit">Start Your Game</span></button>
         </form>
 
         <div class="form-success" id="form-success">
           <div class="success-icon">🎮</div>
-          <h3 class="success-title">Your idea has been received!</h3>
-          <p class="success-sub">Our team will contact you within 24 hours.</p>
+          <h3 class="success-title" data-i18n="form.success.title">Your idea has been received!</h3>
+          <p class="success-sub" data-i18n="form.success.sub">Our team will contact you within 24 hours.</p>
         </div>
       </div>
     </div>
@@ -254,7 +255,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">
-      <img src="assest/JWLOGO.svg" alt="Jaming World" />
+      <img src="assest/JWLOGO.svg" alt="عالم جيمنق" />
     </div>
     <div class="footer-socials">
       <a href="https://www.instagram.com/jamingworld" target="_blank" rel="noopener" class="social-link">
@@ -265,8 +266,12 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.27 6.27 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.79 1.54V6.78a4.85 4.85 0 01-1.02-.09z"/></svg>
         @jamingworld
       </a>
+      <a href="https://www.youtube.com/@JamingWorld" target="_blank" rel="noopener" class="social-link">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        @JamingWorld
+      </a>
     </div>
-    <p class="footer-credit">Designed & Developed by <img src="assest/YAS.svg" alt="YAS" class="footer-yas-logo" /></p>
+    <p class="footer-credit" dir="ltr">Designed &amp; Developed by <a href="https://yasmedia.com" target="_blank" rel="noopener" class="footer-yas-link"><img src="assest/YAS.svg" alt="YAS" class="footer-yas-logo" /></a></p>
   </div>
 </footer>
 
