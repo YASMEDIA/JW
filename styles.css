@@ -914,18 +914,17 @@ footer {
 .social-link {
   display: flex;
   align-items: center;
-  gap: 8px;
-  direction: ltr;
-  padding: 10px 20px;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  border-radius: 50px;
+  border-radius: 50%;
   color: var(--white-80);
   text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .social-link:hover {
@@ -1262,8 +1261,22 @@ footer {
   .form-wrapper { padding: 32px 24px; }
   .form-grid { grid-template-columns: 1fr; }
 
-  .footer-inner { flex-direction: column; text-align: center; }
-  .footer-socials { justify-content: center; }
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+  }
+  .footer-logo img { height: 28px; }
+  .footer-socials {
+    justify-content: center;
+    gap: 14px;
+  }
+  .footer-credit {
+    justify-content: center;
+    font-size: 0.75rem;
+    white-space: nowrap;
+  }
 
   .game-sidebar { grid-template-columns: 1fr; }
 
@@ -1275,6 +1288,7 @@ footer {
   .hero-cta-group { flex-direction: column; align-items: center; }
   .btn-primary, .btn-glass { width: 100%; max-width: 300px; justify-content: center; }
   .games-grid { grid-template-columns: 1fr; }
+  footer { padding: 36px 20px; }
 }
 
 /* ===== NEON DIVIDER ===== */
@@ -1379,9 +1393,32 @@ html[dir="rtl"] .hero-cta-group {
   flex-direction: row-reverse;
 }
 
-html[dir="rtl"] .form-group label,
+html[dir="rtl"] #build-form .section-inner {
+  text-align: right;
+}
+
+html[dir="rtl"] #build-form .neon-line {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
+
+html[dir="rtl"] .form-group label {
+  text-align: right;
+}
+
 html[dir="rtl"] .form-group input,
 html[dir="rtl"] .form-group textarea {
+  text-align: right;
+  direction: rtl;
+}
+
+html[dir="rtl"] .form-group input[type="email"],
+html[dir="rtl"] .form-group input[type="tel"] {
+  direction: ltr;
   text-align: right;
 }
 
@@ -1448,4 +1485,13 @@ html[dir="rtl"] .footer-socials {
 /* Ensure YAS footer link stays LTR */
 html[dir="rtl"] .footer-credit {
   direction: ltr;
+}
+
+@media (max-width: 768px) {
+  html[dir="rtl"] .footer-inner {
+    flex-direction: column;
+  }
+  html[dir="rtl"] .footer-socials {
+    flex-direction: row;
+  }
 }

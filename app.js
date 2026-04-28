@@ -9,12 +9,19 @@ const GAMES = {
     logoBg: '#000000',
     logoBorderColor: 'rgba(255,0,10,0.4)',
     name: '9ayad x Na9ab',
-    tagline: 'The battle of minds begins now',
+    nameAr: 'صياد X نصاب',
+    cardDescKey: 'card.99.desc',
+    tagline: 'Only a Hunter Can Catch a Deceiver',
+    taglineAr: 'مايصيد النصاب الا الصياد',
     desc: `9ayad X Na9ab is a fast-paced social game of deception, persuasion, and sharp thinking.<br>Can you convince your friends when you don't even know the answer — or will they expose you?<br><br>Every round is a mind game where confidence beats knowledge.<br>Built for high-energy groups, it turns any gathering into a tense, hilarious battle of wits.`,
+    descAr: `لعبة سريعة تعتمد على الصياد والنصاب، مو الكل يعرف الإجابة… وهذا اهي الزبدة.<br>اخلط بين الصج والجذب، أقنع ربعك، وحاول ما يايطيح عليك.`,
     players: '3–10 Players',
     duration: '15–30 min',
     age: '12+',
     type: 'Social / Deception / Party Game',
+    playersAr: '3–10 لاعبين',
+    durationAr: '15–30 دقيقة',
+    typeAr: 'اجتماعي / خداع / حفلات',
     color: '#ff000a',
     orderUrl: 'https://na9aab.com',
     isApp: true,
@@ -27,12 +34,19 @@ const GAMES = {
     logoBg: '#ed5633',
     logoBorderColor: 'rgba(237,86,51,0.4)',
     name: 'Deera',
+    nameAr: 'الديرة',
+    cardDescKey: 'card.deera.desc',
     tagline: 'Move. Cooperate. Win.',
+    taglineAr: 'تحرك. تعاون. انتصر.',
     desc: `A strategic team-based board game that blends movement, tactics, and cooperation.<br>Each player controls specific pieces, using dice to advance and navigate the board toward the center to win.`,
+    descAr: `لعبة جماعية تعتمد على الاستراتيجية، فيها حركة وتكتيك وتعاون.<br>كل لاعب يتحكم بقطعه، ويستخدم النرد عشان يتحرك ويوصل للنص ويفوز.`,
     players: '4 Players',
     duration: '40+ min',
     age: '9+',
     type: 'Creative / Party',
+    playersAr: '4 لاعبين',
+    durationAr: '+40 دقيقة',
+    typeAr: 'إبداعي / حفلات',
     color: '#ed5633',
     orderUrl: 'https://jaming-holding.com/product/3-الديرة',
     videoId: 'k1hY65vrYFI',
@@ -43,12 +57,18 @@ const GAMES = {
     emoji: '⚡',
     logoImg: 'assest/Mishakhet.svg',
     name: 'Mishakhet',
+    nameAr: 'مشاخط',
+    cardDescKey: 'card.mishakhet.desc',
     tagline: 'Blink and you lose.',
+    taglineAr: 'طرفة عين وخسرت.',
     desc: 'Mishakhet is a reaction-based adrenaline fest. Players face rapid-fire challenges testing reflexes, coordination, and quick thinking. Dodge obstacles, hit targets, and outlast your opponents in real-time rounds that get faster and more chaotic with every level. Built for competitive spirits and fast fingers.',
     players: '2–12 Players',
     duration: '15–30 min',
     age: '10+',
     type: 'Action / Reaction',
+    playersAr: '2–12 لاعب',
+    durationAr: '15–30 دقيقة',
+    typeAr: 'حركة / ردود أفعال',
     color: '#00d4ff',
     orderUrl: 'https://yasmedia.com/order',
     comingSoon: true,
@@ -56,14 +76,22 @@ const GAMES = {
   'word-clash': {
     id: 'word-clash',
     emoji: '💬',
-    logoImg: 'assest/Asset 6.svg',
+    logoImg: 'assest/SVG/Five s.svg',
+    logoBg: '#000000',
+    logoBorderColor: 'rgba(255,255,255,0.15)',
     name: 'Five',
+    nameAr: 'Five',
+    cardDescKey: 'card.five.desc',
     tagline: 'Words are your weapons.',
+    taglineAr: 'الكلمات سلاحك.',
     desc: 'Five is a dynamic wordplay battle with twists that keep every round fresh. Wildcards, reverse rounds, and surprise modifiers make it unpredictable and hilarious. Players earn points for creativity, speed, and cleverness — making it perfect for language lovers and party game fanatics alike.',
     players: '2–10 Players',
     duration: '25–50 min',
     age: '12+',
     type: 'Word / Strategy',
+    playersAr: '2–10 لاعبين',
+    durationAr: '25–50 دقيقة',
+    typeAr: 'كلمات / استراتيجية',
     color: '#f59e0b',
     orderUrl: 'https://yasmedia.com/order',
     comingSoon: true,
@@ -73,12 +101,18 @@ const GAMES = {
     emoji: '🎲',
     logoImg: 'assest/Bairaq.svg',
     name: 'Bairaq',
+    nameAr: 'البيرق',
+    cardDescKey: 'card.bairaq.desc',
     tagline: 'Spin it. Face it. Own it.',
+    taglineAr: 'أدرها. واجهها. امتلكها.',
     desc: 'Bairaq reimagines the classic dare game with a digital twist. Spin the wheel to land on dares, challenges, truths, or wild card scenarios. With hundreds of prompts ranging from hilarious to boldly daring, no two games are ever the same. The ultimate icebreaker for any party or event.',
     players: '2–20 Players',
     duration: '20–60 min',
     age: '16+',
     type: 'Party / Social',
+    playersAr: '2–20 لاعب',
+    durationAr: '20–60 دقيقة',
+    typeAr: 'حفلات / اجتماعي',
     color: '#ec4899',
     orderUrl: 'https://yasmedia.com/order',
     comingSoon: true,
@@ -88,12 +122,18 @@ const GAMES = {
     emoji: '🚀',
     logoImg: 'assest/High Hand.svg',
     name: 'High Hand',
+    nameAr: 'High Hand',
+    cardDescKey: 'card.highhand.desc',
     tagline: 'Together or nothing.',
+    taglineAr: 'معاً أو لا شيء.',
     desc: 'High Hand is a cooperative adventure where communication and teamwork are your only weapons. Players must solve puzzles, complete missions, and survive challenges — together. With branching storylines and escalating difficulty, High Hand is perfect for corporate events, team-building sessions, and groups who love a real challenge.',
     players: '4–24 Players',
     duration: '45–90 min',
     age: '14+',
     type: 'Co-op / Adventure',
+    playersAr: '4–24 لاعب',
+    durationAr: '45–90 دقيقة',
+    typeAr: 'تعاوني / مغامرة',
     color: '#10b981',
     orderUrl: 'https://yasmedia.com/order',
     comingSoon: true,
@@ -112,12 +152,12 @@ const I18N = {
     'nav.games': 'Games',
     'nav.build': 'Build a Game',
     'nav.cta': 'Start Your Game',
-    'hero.headline': 'Not Just a Game…<br />It\'s a <span class="highlight">World</span>',
+    'hero.headline': 'A Beautiful World…<br />of <span class="highlight">Games</span>',
     'hero.sub': '<span>Play.</span> &nbsp;Compete. &nbsp;<span>Laugh.</span>',
     'hero.explore': 'Explore Games',
     'hero.build': 'Build Your Game →',
     'about.label': 'The Universe',
-    'about.title': 'What is <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Jaming World?</span>',
+    'about.title': 'What is <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">عالم جيمنق?</span>',
     'about.desc': 'A universe of social games designed for real fun — group experiences that bring people together through play, challenges, and laughter.',
     'feat1.title': 'Social Games',
     'feat1.desc': 'Multiplayer experiences designed to be played together — in person or online.',
@@ -126,14 +166,20 @@ const I18N = {
     'feat3.title': 'Pure Fun',
     'feat3.desc': 'Every game is crafted to make you laugh, connect, and create memories.',
     'feat4.title': 'Group Experiences',
-    'feat4.desc': 'From small gatherings to big events — Jaming World scales with your crew.',
+    'feat4.desc': 'From small gatherings to big events — عالم جيمنق scales with your crew.',
     'games.label': 'The Arena',
     'games.title': 'Choose Your <span style="background:linear-gradient(135deg,#9d5cff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Game</span>',
     'games.desc': 'Each game is a world of its own. Tap to dive in.',
     'card.explore': 'Explore',
     'card.soon': 'Coming Soon',
+    'card.99.name': '9ayad x Na9ab',
+    'card.deera.name': 'Deera',
+    'card.mishakhet.name': 'Mishakhet',
+    'card.five.name': 'Five',
+    'card.bairaq.name': 'Bairaq',
+    'card.highhand.name': 'High Hand',
     'card.99.desc': 'A fast-paced deception game where you bluff, convince, and outsmart your friends. Can you fake the truth… or will you get exposed?',
-    'card.deera.desc': 'A strategic team game where players move, cooperate, and race to the center using dice. 🎮',
+    'card.deera.desc': 'A strategic team game where players move, cooperate, and race to the center using dice.',
     'card.mishakhet.desc': 'Reaction-based chaos. Hit, dodge, and race your way to victory in real-time.',
     'card.five.desc': 'Wordplay battles with twists, wildcards, and surprise round modifiers.',
     'card.bairaq.desc': 'Spin the wheel and face the dare. The classic party game, reimagined.',
@@ -149,15 +195,15 @@ const I18N = {
     'form.email.placeholder': 'you@example.com',
     'form.idea.label': 'Your Game Idea',
     'form.idea.placeholder': 'Describe your game concept — mechanics, theme, players, vibe...',
-    'form.submit': '🎮 Start Your Game',
+    'form.submit': 'Start Your Game',
     'form.success.title': 'Your idea has been received!',
     'form.success.sub': 'Our team will contact you within 24 hours.',
     'footer.credit': 'Designed & Developed by',
     'back': 'Back to World',
     'detail.about': 'About This Game',
     'detail.get': 'Get This Game',
-    'detail.order': '🛒 Order Now',
-    'detail.download': '⬇️ Download Now',
+    'detail.order': 'Order Now',
+    'detail.download': 'Download Now',
     'detail.redirect': "You'll be redirected to our ordering system",
     'detail.manual': 'Game Manual',
     'detail.manual.btn': 'Download PDF',
@@ -173,14 +219,14 @@ const I18N = {
     'loading': 'جاري تحميل تجربة الألعاب...',
     'nav.about': 'عن العالم',
     'nav.games': 'الألعاب',
-    'nav.build': 'ابنِ لعبتك',
+    'nav.build': 'صمم لعبتك',
     'nav.cta': 'ابدأ لعبتك',
-    'hero.headline': 'ليست مجرد لعبة…<br />إنها <span class="highlight">عالم</span>',
+    'hero.headline': 'عالم جميل…<br />من <span class="highlight">الألعاب</span>',
     'hero.sub': '<span>العب.</span> &nbsp;تنافس. &nbsp;<span>اضحك.</span>',
     'hero.explore': 'استكشف الألعاب',
-    'hero.build': '← ابنِ لعبتك',
+    'hero.build': '← صمم لعبتك',
     'about.label': 'الكون',
-    'about.title': 'ما هو <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Jaming World؟</span>',
+    'about.title': 'ما هو <span style="background:linear-gradient(135deg,#6fa3ff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">عالم جيمنق؟</span>',
     'about.desc': 'عالم من الألعاب الاجتماعية صُمِّم للمتعة الحقيقية — تجارب جماعية تجمع الناس معاً بالضحك والتحدي واللعب.',
     'feat1.title': 'ألعاب اجتماعية',
     'feat1.desc': 'تجارب متعددة اللاعبين مصممة للعب المشترك — حضورياً أو أونلاين.',
@@ -189,14 +235,20 @@ const I18N = {
     'feat3.title': 'متعة خالصة',
     'feat3.desc': 'كل لعبة مصممة لتضحك وتتواصل وتصنع ذكريات لا تُنسى.',
     'feat4.title': 'تجارب جماعية',
-    'feat4.desc': 'من التجمعات الصغيرة إلى الفعاليات الكبيرة — Jaming World يتأقلم مع مجموعتك.',
+    'feat4.desc': 'من التجمعات الصغيرة إلى الفعاليات الكبيرة — عالم جيمنق يتأقلم مع مجموعتك.',
     'games.label': 'الساحة',
     'games.title': 'اختر <span style="background:linear-gradient(135deg,#9d5cff,#00d4ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">لعبتك</span>',
     'games.desc': 'كل لعبة عالم منفصل. اضغط وانطلق.',
     'card.explore': 'استكشف',
     'card.soon': 'قريباً',
+    'card.99.name': 'صياد X نصاب',
+    'card.deera.name': 'الديرة',
+    'card.mishakhet.name': 'مشاخط',
+    'card.five.name': 'Five',
+    'card.bairaq.name': 'البيرق',
+    'card.highhand.name': 'High Hand',
     'card.99.desc': 'لعبة خداع سريعة حيث تكذب وتقنع وتتفوق على أصدقائك. هل تستطيع تزوير الحقيقة… أم ستُكشف؟',
-    'card.deera.desc': 'لعبة استراتيجية جماعية حيث يتنافس اللاعبون بالنرد للوصول إلى المركز. 🎮',
+    'card.deera.desc': 'لعبة استراتيجية جماعية حيث يتنافس اللاعبون بالنرد للوصول إلى المركز.',
     'card.mishakhet.desc': 'فوضى مبنية على ردود الأفعال. اضرب، تهرّب، وتسابق نحو النصر في الوقت الحقيقي.',
     'card.five.desc': 'معارك الكلمات مع تويستات وبطاقات وحشية ومعدِّلات جولات مفاجئة.',
     'card.bairaq.desc': 'أدر العجلة وواجه التحدي. لعبة الحفلات الكلاسيكية بتصور جديد.',
@@ -220,7 +272,7 @@ const I18N = {
     'detail.about': 'عن اللعبة',
     'detail.get': 'احصل على اللعبة',
     'detail.order': 'اطلب الآن',
-    'detail.download': '⬇️ حمّل الآن',
+    'detail.download': 'حمّل الآن',
     'detail.redirect': 'ستُحوَّل إلى نظام الطلبات',
     'detail.manual': 'دليل اللعبة',
     'detail.manual.btn': 'تحميل PDF',
@@ -260,6 +312,8 @@ function setLanguage(lang) {
     const val = I18N[lang]?.[el.dataset.i18nPlaceholder];
     if (val !== undefined) el.placeholder = val;
   });
+
+  if (typeof window.__detailLangUpdate === 'function') window.__detailLangUpdate(lang);
 }
 
 // Init language on page load
@@ -374,7 +428,7 @@ $$('.mobile-nav-link, .mobile-nav a').forEach(link => {
   if (!els.length) return;
 
   const io = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const delay = entry.target.dataset.delay || 0;
         setTimeout(() => {
@@ -399,27 +453,21 @@ $$('.mobile-nav-link, .mobile-nav a').forEach(link => {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
+        entry.target.classList.add('revealed');
         io.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  cards.forEach((card, i) => {
-    card.style.transitionDelay = (i * 80) + 'ms';
-    io.observe(card);
-  });
+  }, { threshold: 0.1 });
+  cards.forEach(card => io.observe(card));
 })();
 
-// ===== FORM SUBMISSION =====
+// ===== CONTACT FORM =====
 const form = $('#game-idea-form');
-const formSuccess = $('#form-success');
-
 form?.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const btn = form.querySelector('button[type="submit"]');
-  const originalHTML = btn.innerHTML;
+
+  const btn = form.querySelector('.form-submit');
+  const original = btn.innerHTML;
   btn.innerHTML = '<span>Sending...</span>';
   btn.disabled = true;
 
@@ -430,56 +478,20 @@ form?.addEventListener('submit', async (e) => {
     idea: $('#idea')?.value,
   };
 
-  // Send via mailto fallback (emailjs or formspree can be wired here)
-  try {
-    await sendFormEmail(data);
-  } catch (_) {}
+  await sendFormEmail(data);
 
-  // Always show success
   setTimeout(() => {
-    form.style.opacity = '0';
-    form.style.transform = 'scale(0.97)';
-    form.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-    setTimeout(() => {
-      form.style.display = 'none';
-      formSuccess?.classList.add('show');
-    }, 400);
-  }, 600);
-});
+    btn.innerHTML = original;
+    btn.disabled = false;
+    form.reset();
 
-async function sendFormEmail(data) {
-  const body = `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\nGame Idea:\n${data.idea}`;
-  // Opens mail client as fallback (replace with EmailJS / Formspree for production)
-  const mailto = `mailto:info@yasmedia.com?subject=New Game Idea from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(body)}`;
-  const a = document.createElement('a');
-  a.href = mailto;
-  a.style.display = 'none';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-}
-
-// ===== PAGE TRANSITIONS =====
-function navigateTo(url) {
-  const pt = $('#page-transition');
-  if (pt) {
-    pt.classList.add('active');
-    setTimeout(() => { window.location.href = url; }, 300);
-  } else {
-    window.location.href = url;
-  }
-}
-
-// Intercept internal link clicks for smooth transitions
-$$('a[href]').forEach(a => {
-  const href = a.getAttribute('href');
-  if (href && !href.startsWith('#') && !href.startsWith('http') && !href.startsWith('mailto') && !a.target) {
-    a.addEventListener('click', (e) => {
-      e.preventDefault();
-      navigateTo(href);
-    });
-  }
-});
+    const success = $('#form-success');
+    if (success) {
+      success.classList.add('show');
+      setTimeout(() => success.classList.remove('show'), 5000);
+    }
+  }, 400);
+}, 600);
 
 // Fade in on page load
 document.addEventListener('DOMContentLoaded', () => {
@@ -489,6 +501,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+async function sendFormEmail(data) {
+  const body = `Name: ${data.name}\nPhone: ${data.phone}\nEmail: ${data.email}\n\nGame Idea:\n${data.idea}`;
+  const mailto = `mailto:info@yasmedia.com?subject=New Game Idea from ${encodeURIComponent(data.name)}&body=${encodeURIComponent(body)}`;
+  const a = document.createElement('a');
+  a.href = mailto;
+  a.style.display = 'none';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 // ===== GAME DETAIL PAGE LOGIC =====
 if (document.querySelector('.game-detail-hero')) {
   const params = new URLSearchParams(window.location.search);
@@ -496,15 +519,10 @@ if (document.querySelector('.game-detail-hero')) {
   const game = GAMES[gameId];
 
   if (game) {
-    document.title = `${game.name} — Jaming World`;
-
+    // --- Static setup (runs once) ---
     const logoEl = $('#detail-logo');
-    const titleEl = $('#detail-title');
-    const taglineEl = $('#detail-tagline');
-    const descEl = $('#detail-desc');
-    const infoList = $('#game-info-list');
     const orderBtn = $('#order-btn');
-    const downloadBtn = $('#download-btn');
+    const videoSection = $('#video-section');
     const videoLabel = $('#video-label');
 
     if (logoEl) {
@@ -517,104 +535,101 @@ if (document.querySelector('.game-detail-hero')) {
         logoEl.textContent = game.emoji;
       }
     }
-    if (titleEl) titleEl.textContent = game.name;
-    if (taglineEl) taglineEl.textContent = game.tagline;
-    if (descEl) descEl.innerHTML = game.desc;
     if (orderBtn) {
       orderBtn.href = game.orderUrl;
       orderBtn.target = '_blank';
       orderBtn.rel = 'noopener';
-      if (game.isApp) {
-        orderBtn.querySelector('span').innerHTML = 'Download Now';
-      }
     }
-
-    // Hide manual card if no manual provided
     const manualCard = $('#download-btn')?.closest('.glass-card');
     if (manualCard && !game.manualUrl) manualCard.style.display = 'none';
 
-    // Embed YouTube video if videoId provided
-    const videoSection = $('#video-section');
     if (videoSection && game.videoId) {
       const startParam = game.videoStart ? `?start=${game.videoStart}` : '';
       videoSection.innerHTML = `<iframe src="https://www.youtube.com/embed/${game.videoId}${startParam}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:var(--radius-lg);"></iframe>`;
       videoSection.style.position = 'relative';
-    } else if (videoLabel) {
-      videoLabel.textContent = `${game.name} — Gameplay Reel`;
     }
 
-    // Apply game color accent
     document.documentElement.style.setProperty('--blue-glow', game.color);
     document.documentElement.style.setProperty('--blue-light', game.color);
 
-    // Info rows
-    if (infoList) {
-      const lang = getLang();
+    // --- Lang-dependent rendering (called on load + every language switch) ---
+    function renderDetailLang(lang) {
+      const displayName = (lang === 'ar' && game.nameAr) ? game.nameAr : game.name;
+      document.title = `${displayName} — عالم جيمنق`;
+
+      const titleEl = $('#detail-title');
+      const taglineEl = $('#detail-tagline');
+      const descEl = $('#detail-desc');
+      const infoList = $('#game-info-list');
+      const moreContainer = $('#more-games');
+
+      if (titleEl) titleEl.textContent = displayName;
+      if (taglineEl) taglineEl.textContent = (lang === 'ar' && game.taglineAr) ? game.taglineAr : game.tagline;
+      if (descEl) descEl.innerHTML = (lang === 'ar' && game.descAr) ? game.descAr : game.desc;
+      if (videoLabel && !game.videoId) videoLabel.textContent = `${displayName} — Gameplay Reel`;
+
+      if (orderBtn && game.isApp) {
+        const span = orderBtn.querySelector('span');
+        if (span) {
+          span.textContent = I18N[lang]?.['detail.download'] || 'Download Now';
+          span.removeAttribute('data-i18n');
+        }
+      }
+
       const t = (k) => I18N[lang]?.[k] || k;
-      const rows = [
-        { label: t('info.players'), value: game.players },
-        { label: t('info.duration'), value: game.duration },
-        { label: t('info.age'), value: game.age },
-        { label: t('info.type'), value: game.type },
-      ];
-      infoList.innerHTML = rows.map(r =>
-        `<div class="info-row"><span class="label">${r.label}</span><span class="value">${r.value}</span></div>`
-      ).join('');
+      if (infoList) {
+        const ar = lang === 'ar';
+        infoList.innerHTML = [
+          { label: t('info.players'), value: ar && game.playersAr ? game.playersAr : game.players },
+          { label: t('info.duration'), value: ar && game.durationAr ? game.durationAr : game.duration },
+          { label: t('info.age'), value: game.age },
+          { label: t('info.type'), value: ar && game.typeAr ? game.typeAr : game.type },
+        ].map(r => `<div class="info-row"><span class="label">${r.label}</span><span class="value">${r.value}</span></div>`).join('');
+      }
+
+      if (moreContainer) {
+        const others = Object.values(GAMES).filter(g => g.id !== gameId).slice(0, 3);
+        moreContainer.innerHTML = others.map(g => {
+          const logoHtml = g.logoImg ? `<img src="${g.logoImg}" alt="${g.name}">` : g.emoji;
+          const logoBg = g.logoBg || 'rgba(255,255,255,0.08)';
+          const logoBorder = g.logoBorderColor || 'rgba(255,255,255,0.12)';
+          const logoPadding = g.logoImg ? '14px' : '';
+          const cardName = (lang === 'ar' && g.nameAr) ? g.nameAr : g.name;
+          const cardDesc = (g.cardDescKey && I18N[lang]?.[g.cardDescKey]) || g.desc.substring(0, 100);
+          const soonLabel = I18N[lang]?.['card.soon'] || 'Coming Soon';
+          const exploreLabel = I18N[lang]?.['card.explore'] || 'Explore';
+          const soonBadge = g.comingSoon ? `<div class="coming-soon-badge">${soonLabel}</div>` : '';
+          const soonStyle = g.comingSoon ? 'opacity:0.55; pointer-events:none;' : '';
+          return `
+            <a href="game.html?id=${g.id}" class="glass-card game-card${g.comingSoon ? ' game-card--soon' : ''} scroll-reveal" style="opacity:0; transform:translateY(30px); ${soonStyle}">
+              ${soonBadge}
+              <div class="game-card-inner">
+                <div class="game-card-logo" style="background:${logoBg}; border-color:${logoBorder}; padding:${logoPadding};">${logoHtml}</div>
+                <h3 class="game-card-name">${cardName}</h3>
+                <p class="game-card-desc">${cardDesc}</p>
+                <div class="game-card-arrow"><span>${exploreLabel}</span> <span class="arrow-icon">→</span></div>
+              </div>
+            </a>
+          `;
+        }).join('');
+        setTimeout(() => {
+          $$('#more-games .scroll-reveal').forEach((card, i) => {
+            setTimeout(() => {
+              card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            }, i * 100 + 200);
+          });
+        }, 300);
+      }
     }
 
-    // More games
-    const moreContainer = $('#more-games');
-    if (moreContainer) {
-      const others = Object.values(GAMES).filter(g => g.id !== gameId).slice(0, 3);
-      moreContainer.innerHTML = others.map(g => {
-        const logoHtml = g.logoImg
-          ? `<img src="${g.logoImg}" alt="${g.name}">`
-          : g.emoji;
-        const logoBg = g.logoBg || 'rgba(255,255,255,0.08)';
-        const logoBorder = g.logoBorderColor || 'rgba(255,255,255,0.12)';
-        const logoPadding = g.logoImg ? '14px' : '';
-        const lang = getLang();
-        const soonLabel = I18N[lang]?.['card.soon'] || 'Coming Soon';
-        const exploreLabel = I18N[lang]?.['card.explore'] || 'Explore';
-        const soonBadge = g.comingSoon ? `<div class="coming-soon-badge">${soonLabel}</div>` : '';
-        const soonStyle = g.comingSoon ? 'opacity:0.55; pointer-events:none;' : '';
-        return `
-          <a href="game.html?id=${g.id}" class="glass-card game-card${g.comingSoon ? ' game-card--soon' : ''} scroll-reveal" style="opacity:0; transform:translateY(30px); ${soonStyle}">
-            ${soonBadge}
-            <div class="game-card-inner">
-              <div class="game-card-logo" style="background:${logoBg}; border-color:${logoBorder}; padding:${logoPadding};">${logoHtml}</div>
-              <h3 class="game-card-name">${g.name}</h3>
-              <p class="game-card-desc">${g.desc.substring(0, 100)}...</p>
-              <div class="game-card-arrow"><span>${exploreLabel}</span> <span class="arrow-icon">→</span></div>
-            </div>
-          </a>
-        `;
-      }).join('');
+    renderDetailLang(getLang());
+    window.__detailLangUpdate = renderDetailLang;
 
-      // Re-init scroll reveal for dynamic cards
-      setTimeout(() => {
-        $$('#more-games .scroll-reveal').forEach((card, i) => {
-          setTimeout(() => {
-            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          }, i * 100 + 200);
-        });
-      }, 300);
-    }
   } else {
-    // Unknown game — redirect home
     window.location.href = 'index.html#games';
   }
-
-  // Play button interaction
-  const playBtn = $('#play-btn');
-  playBtn?.addEventListener('click', () => {
-    playBtn.style.transform = 'scale(0.95)';
-    setTimeout(() => { playBtn.style.transform = ''; }, 150);
-    // In production: embed a real video player here
-    alert('🎮 Video coming soon! Full gameplay reel will be available here.');
-  });
 }
 
 // ===== HERO PARALLAX =====
