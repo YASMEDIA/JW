@@ -29,6 +29,7 @@
   --cyan: #00d4ff;
   --white: #ffffff;
   --white-80: rgba(255,255,255,0.8);
+  --white-75: rgba(255,255,255,0.75);
   --white-60: rgba(255,255,255,0.6);
   --white-20: rgba(255,255,255,0.2);
   --white-10: rgba(255,255,255,0.1);
@@ -109,9 +110,8 @@ body {
 .loading-text {
   font-size: 1rem;
   letter-spacing: 0.3em;
-  color: var(--blue-soft);
+  color: var(--white-80);
   text-transform: uppercase;
-  opacity: 0.8;
 }
 
 .loading-bar-wrap {
@@ -361,7 +361,7 @@ main {
 
 .hero-sub {
   font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: var(--white-60);
+  color: var(--white-75);
   letter-spacing: 0.15em;
   text-transform: uppercase;
   margin-bottom: 48px;
@@ -502,38 +502,49 @@ section {
 .section-label {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-size: 0.75rem;
-  letter-spacing: 0.25em;
+  gap: 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: var(--cyan);
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   opacity: 0;
   transform: translateY(20px);
+  text-shadow: 0 0 20px rgba(0,212,255,0.6);
 }
 
 .section-label::before {
   content: '';
-  width: 24px;
-  height: 1px;
-  background: var(--cyan);
+  width: 32px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--blue-glow), var(--cyan));
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,212,255,0.5);
 }
 
 .section-title {
-  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-size: clamp(2.4rem, 5.5vw, 5rem);
   font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin-bottom: 20px;
   opacity: 0;
   transform: translateY(20px);
+  text-shadow: 0 0 80px rgba(99,160,255,0.12);
+}
+
+.section-title span {
+  display: inline-block;
+  animation: gradientShift 4s ease infinite;
+  background-size: 200%;
 }
 
 .section-desc {
-  font-size: 1.1rem;
-  color: var(--white-60);
-  line-height: 1.7;
-  max-width: 600px;
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: var(--white-75);
+  line-height: 1.75;
+  max-width: 640px;
   opacity: 0;
   transform: translateY(20px);
 }
@@ -628,7 +639,7 @@ section {
 
 .feature-desc {
   font-size: 0.9rem;
-  color: var(--white-60);
+  color: var(--white-75);
   line-height: 1.6;
 }
 
@@ -702,7 +713,7 @@ section {
 
 .game-card-desc {
   font-size: 0.9rem;
-  color: var(--white-60);
+  color: var(--white-75);
   line-height: 1.6;
   flex: 1;
 }
@@ -746,9 +757,9 @@ section {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.92);
   background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.22);
   border-radius: 100px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -808,7 +819,7 @@ section {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--white-60);
+  color: var(--white-75);
 }
 
 .form-group input,
@@ -827,7 +838,7 @@ section {
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.45);
 }
 
 .form-group input:focus,
@@ -879,7 +890,7 @@ section {
   font-weight: 700;
 }
 
-.success-sub { color: var(--white-60); font-size: 0.95rem; }
+.success-sub { color: var(--white-75); font-size: 0.95rem; }
 
 /* ===== FOOTER ===== */
 footer {
@@ -937,7 +948,7 @@ footer {
 
 .footer-credit {
   font-size: 0.8rem;
-  color: var(--white-60);
+  color: var(--white-75);
   letter-spacing: 0.05em;
   display: flex;
   align-items: center;
@@ -1045,7 +1056,7 @@ footer {
 }
 
 .game-detail-tagline {
-  color: var(--white-60);
+  color: var(--white-75);
   font-size: 1.1rem;
   margin-top: 8px;
 }
@@ -1077,7 +1088,7 @@ footer {
   flex-direction: column;
   align-items: center;
   gap: 16px;
-  color: var(--white-60);
+  color: var(--white-75);
   text-align: center;
   padding: 40px;
 }
@@ -1119,7 +1130,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--white-60);
+  color: var(--white-75);
   margin-bottom: 16px;
 }
 
@@ -1172,7 +1183,7 @@ footer {
 }
 
 .info-row:last-child { border-bottom: none; padding-bottom: 0; }
-.info-row .label { color: var(--white-60); }
+.info-row .label { color: var(--white-75); }
 .info-row .value { font-weight: 600; }
 
 /* ===== HAMBURGER ===== */
@@ -1376,8 +1387,7 @@ html[dir="rtl"] .section-label {
 }
 
 html[dir="rtl"] .game-card-arrow {
-  flex-direction: row-reverse;
-  justify-content: flex-end;
+  justify-content: flex-start;
 }
 
 html[dir="rtl"] .footer-inner {

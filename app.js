@@ -56,6 +56,8 @@ const GAMES = {
     id: 'speed-race',
     emoji: '⚡',
     logoImg: 'assest/Mishakhet.svg',
+    logoBg: '#7c56a3',
+    logoBorderColor: 'rgba(124,86,163,0.5)',
     name: 'Mishakhet',
     nameAr: 'مشاخط',
     cardDescKey: 'card.mishakhet.desc',
@@ -100,6 +102,8 @@ const GAMES = {
     id: 'dare-drop',
     emoji: '🎲',
     logoImg: 'assest/Bairaq.svg',
+    logoBg: '#000000',
+    logoBorderColor: 'rgba(255,255,255,0.15)',
     name: 'Bairaq',
     nameAr: 'البيرق',
     cardDescKey: 'card.bairaq.desc',
@@ -121,6 +125,8 @@ const GAMES = {
     id: 'team-quest',
     emoji: '🚀',
     logoImg: 'assest/High Hand.svg',
+    logoBg: '#18361a',
+    logoBorderColor: 'rgba(224,191,125,0.35)',
     name: 'High Hand',
     nameAr: 'High Hand',
     cardDescKey: 'card.highhand.desc',
@@ -607,7 +613,7 @@ if (document.querySelector('.game-detail-hero')) {
                 <div class="game-card-logo" style="background:${logoBg}; border-color:${logoBorder}; padding:${logoPadding};">${logoHtml}</div>
                 <h3 class="game-card-name">${cardName}</h3>
                 <p class="game-card-desc">${cardDesc}</p>
-                <div class="game-card-arrow"><span>${exploreLabel}</span> <span class="arrow-icon">→</span></div>
+                <div class="game-card-arrow"><span>${exploreLabel}</span> <span class="arrow-icon" aria-hidden="true">→</span></div>
               </div>
             </a>
           `;

@@ -3,7 +3,13 @@
     "allow": [
       "mcp__Claude_Preview__preview_start",
       "Read(//usr/bin/**)",
-      "Read(//usr/local/**)"
+      "Read(//usr/local/**)",
+      "Bash(gh api *)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm install *)",
+      "Bash(export PATH=\"/opt/homebrew/bin:/usr/local/bin:$PATH\")",
+      "Bash(git --version)",
+      "Bash(git clone *)"
     ]
   }
 }

@@ -71,16 +71,18 @@
     <div>
       <div class="video-section glass-card" id="video-section">
         <div class="video-placeholder">
-          <div class="play-icon" id="play-btn">▶</div>
+          <div class="play-icon" id="play-btn" role="button" tabindex="0" aria-label="Play gameplay video">
+            <span aria-hidden="true">▶</span>
+          </div>
           <p id="video-label" style="font-size:1rem; font-weight:600; margin-top:8px;">Game Preview</p>
-          <p style="font-size:0.85rem; color:rgba(255,255,255,0.4);" data-i18n="detail.video.sub">Click to watch the gameplay reel</p>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.65);" data-i18n="detail.video.sub">Click to watch the gameplay reel</p>
         </div>
       </div>
 
       <!-- Game Description -->
       <div class="glass-card" style="padding:36px; margin-top:24px;">
         <h3 style="font-size:1.2rem; font-weight:700; margin-bottom:16px; color:rgba(255,255,255,0.9);" data-i18n="detail.about">About This Game</h3>
-        <p id="detail-desc" style="color:rgba(255,255,255,0.65); line-height:1.8; font-size:0.95rem;"></p>
+        <p id="detail-desc" style="color:rgba(255,255,255,0.8); line-height:1.8; font-size:0.95rem;"></p>
       </div>
     </div>
 
@@ -92,7 +94,7 @@
         <a href="https://yasmedia.com/order" target="_blank" rel="noopener" class="btn-primary order-btn" id="order-btn">
           <span data-i18n="detail.order">🛒 Order Now</span>
         </a>
-        <p style="font-size:0.78rem; color:rgba(255,255,255,0.35); text-align:center; margin-top:12px;" data-i18n="detail.redirect">You'll be redirected to our ordering system</p>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.7); text-align:center; margin-top:12px;" data-i18n="detail.redirect">You'll be redirected to our ordering system</p>
       </div>
 
       <!-- Download Manual -->
